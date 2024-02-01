@@ -1,20 +1,18 @@
 import React from "react";
 import Card from "./Card";
+import { robots } from "./robots";
 
 
 const CardList = () => {
 
-    return (
+    const robCopy = robots.map((robots, i) => {
 
-        <div>
-            <Card botName={"Alpha"}/>
-            <Card botName={"Beta"}/>
-            <Card botName={"Charlie"}/>
-            <Card botName={"Delta"}/>
-       </div>
-
-    );
-
+        return (
+            <Card id = {robots.id} botName= {robots.name} email={robots.email} />
+        );  
+    });
+    
+    return <div className = "tc">{robCopy}</div>
 };
 
 export default CardList;
