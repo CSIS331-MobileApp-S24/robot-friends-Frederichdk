@@ -3,12 +3,13 @@ import Card from "./Card";
 import { robots } from "./robots";
 
 
-const CardList = () => {
+const CardList = ({robots}) => {
 
+    //copy of an array
     const robCopy = robots.map((robots, i) => {
 
         return (
-            <Card id = {robots.id} botName= {robots.name} email={robots.email} />
+            <Card key ={i} id = {robots.id} botName= {robots.name} email={robots.email} />
         );  
     });
     
