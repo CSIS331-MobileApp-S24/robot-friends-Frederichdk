@@ -15,5 +15,4 @@ const CardList = ({robots}) => {
     
     return <div className = "tc">{robCopy}</div>
 };
-
 export default CardList;
